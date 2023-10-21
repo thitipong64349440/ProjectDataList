@@ -1,12 +1,12 @@
 <template>
     <div>
-        <h1>Philips</h1>
-        <div>id: {{ philips.id }}</div>
-        <div>ชื่อ: {{ philips.name_thai }} {{ philips.name_eng }}</div>
-        <div>รุ่น: {{ philips.model }}</div>
-        <div>ประเภท: {{ philips.category }}</div>
-        <div>รายละเอียด: {{ philips.detail }}</div>
-        <div>ราคา: {{ philips.price }}</div>
+        <h1><span>Philips</span></h1>
+        <div>id: <a1>{{ philips.id }}</a1></div>
+        <div>ชื่อ: <a1>{{ philips.name_thai }} {{ philips.name_eng }}</a1></div>
+        <div>รุ่น: <a1>{{ philips.model }}</a1></div>
+        <div>ประเภท: <a1>{{ philips.category }}</a1></div>
+        <div>รายละเอียด: <a1>{{ philips.detail }}</a1></div>
+        <div>ราคา: <a1>{{ philips.price }}</a1></div>
         <div><button v-on:click="navigateTo('/philipss')">กลับ</button></div>
         <hr>
     </div>

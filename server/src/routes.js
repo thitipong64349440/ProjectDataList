@@ -1,5 +1,3 @@
-// const UserAuthenController = require('./controllers/UserAuthenController')
-// const isAuthenController = require('./authen/isAuthenController')
 const ElectroluxController = require('./controllers/ElectroluxController')
 const PhilipsController = require('./controllers/PhilipsController')
 const TefalController = require('./controllers/TefalController')
@@ -7,7 +5,6 @@ const XiaomiController = require('./controllers/XiaomiController')
 
 module.exports = (app) => {
     /* RESFUL Api for users management */
-
 
     // Electrolux
     app.get('/electroluxs', ElectroluxController.index)
@@ -60,15 +57,4 @@ module.exports = (app) => {
     app.delete('/xiaomi/:xiaomiId', XiaomiController.delete)
     
     app.get('/xiaomi/:xiaomiId', XiaomiController.show)
-
-    
-    
-
-     // login
-    // app.post('/login', UserAuthenController.login)
-
-    // get all user
-    // app.get('/users', isAuthenController, UserController.index)
-    
-    // app.post('/login', UserAuthenController.login)
 }

@@ -1,25 +1,20 @@
 <template>
-    <div>
-        <h1>Create Philips</h1>
-        <form v-on:submit.prevent="createPhilips">
-            <p>ชื่อ: <input type="text" v-on="philips.name_thai"></p>
-            <p>name: <input type="text" v-model="philips.name_eng"></p>
-            <p>รุ่น: <input type="text" v-model="philips.model"></p>
-            <p>ประเภท: <input type="text" v-model="philips.category"></p>
-            <p>รายละเอียด: <input type="text" v-model="philips.detail"></p>
-            <p>ราคา: <input type="text" v-model="philips.price"></p>
-            <p><button type="submit">create philips</button></p>
-        </form>
-        <hr>
-        <div>
-            <p>ชื่อ: {{ philips.name_thai }}</p>
-            <p>name: {{ philips.name_eng }}</p>
-            <p>รุ่น: {{ philips.model }}</p>
-            <p>ประเภท: {{ philips.category }}</p>
-            <p>รายละเอียด: {{ philips.detail }}</p>
-            <p>ราคา: {{ philips.price }}</p>
+    <div2 style="display:flex; align-items:center; justify-content:center;">
+        <div class="page">
+            <div class="form1">
+                <h1><span>Create Philips</span></h1>
+                <form class="register-form" v-on:submit.prevent="createPhilips">
+                    <input type="text" placeholder="ชื่อ *" v-model="philips.name_thai" required>
+                    <input type="text" placeholder="name" v-model="philips.name_eng">
+                    <input type="text" placeholder="รุ่น *" v-model="philips.model" required>
+                    <input type="text" placeholder="ประเภท" v-model="philips.category">
+                    <input type="text" placeholder="รายละเอียด" v-model="philips.detail">
+                    <input type="text" placeholder="ราคา *" v-model="philips.price" required>
+                    <button type="submit">Create</button>
+                    <button v-on:click="navigateTo('/electroluxs')">กลับ</button>                </form>
+            </div>
         </div>
-    </div>
+    </div2>
 </template>
 <script>
 import PhilipsService from '@/services/PhilipsService'
@@ -35,6 +30,11 @@ export default {
                 price: '',
             }
         }
+    }, 
+    methods: {
+        navigateTo(route) {
+            this.$router.push(route)
+        }
     },
     methods: {
         async createPhilips() {
@@ -46,8 +46,12 @@ export default {
             } catch (err) {
                 console.log(err)
             }
+        },
+        navigateTo(route){
+            this.$router.push(route)
         }
-    }
+    },
+   
 }
 </script>
 <style scoped></style>

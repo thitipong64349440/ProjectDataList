@@ -1,30 +1,29 @@
 <template>
-    <div>
-        <h1>Iron All brands</h1>
-        <div>Tefal</div>
-        <button v-on:click="navigateTo('/tefals')">ดูรายการ</button>
-        <hr>
-        <div>Philips</div>
-        <button v-on:click="navigateTo('/philipss')">ดูรายการ</button>
-        <hr>
-        <div>Xiaomi</div>
-        <button v-on:click="navigateTo('/xiaomis')">ดูรายการ</button>
-        <hr>
-        <div>Electrolux</div>
-        <button v-on:click="navigateTo('/electroluxs')">ดูรายการ</button>
-    </div>
+    <div1>
+        <h1><span>Iron All brands</span></h1>
+        <ul>
+            <li style="--clr: #00ade1;">
+            <a href="#/tefals" data-text="TEFAI">TEFAI</a>
+            </li>
+            <li style="--clr: #ff6493;">
+            <a href="#/philipss" data-text="PHILIPS">PHILIPS</a>
+            </li>
+            <li style="--clr: #ffdd1c;">
+            <a href="#/xiaomis" data-text="XIAOMI">XIAOMI</a>
+            </li>
+            <li style="--clr: #00dc82;">
+            <a href="#/electroluxs" data-text="ELECTROLUX">ELECTROLUX</a>
+            </li>
+        </ul>
+    </div1>
 </template>
 <script>
-import ElectroluxService from '@/services/ElectroluxService'
-import PhilipsService from '@/services/PhilipsService'
-import TefalService from '@/services/TefalService'
-import XiaomiService from '@/services/XiaomiService'
 export default {
-  methods: {
-      navigateTo(route) {
-          this.$router.push(route)
-      },
-  },
+    methods: {
+        navigateTo(route) {
+            this.$router.push(route)
+        },
+    },
 }
 </script>
 <style scoped></style>

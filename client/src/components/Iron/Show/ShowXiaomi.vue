@@ -1,12 +1,12 @@
 <template>
     <div>
-        <h1>Xiaomi</h1>
-        <div>id: {{ xiaomi.id }}</div>
-        <div>ชื่อ: {{ xiaomi.name_thai }} {{ xiaomi.name_eng }}</div>
-        <div>รุ่น: {{ xiaomi.model }}</div>
-        <div>ประเภท: {{ xiaomi.category }}</div>
-        <div>รายละเอียด: {{ xiaomi.detail }}</div>
-        <div>ราคา: {{ xiaomi.price }}</div>
+        <h1><span>Xiaomi</span></h1>
+        <div>id: <a1>{{ xiaomi.id }}</a1></div>
+        <div>ชื่อ: <a1>{{ xiaomi.name_thai }} {{ xiaomi.name_eng }}</a1></div>
+        <div>รุ่น: <a1>{{ xiaomi.model }}</a1></div>
+        <div>ประเภท: <a1>{{ xiaomi.category }}</a1></div>
+        <div>รายละเอียด: <a1>{{ xiaomi.detail }}</a1></div>
+        <div>ราคา: <a1>{{ xiaomi.price }}</a1></div>
         <div><button v-on:click="navigateTo('/xiaomis')">กลับ</button></div>
         <hr>
     </div>

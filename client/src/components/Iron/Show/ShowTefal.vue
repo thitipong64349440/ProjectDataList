@@ -1,12 +1,12 @@
 <template>
     <div>
-        <h1>Tefal</h1>
-        <div>id: {{ tefal.id }}</div>
-        <div>ชื่อ: {{ tefal.name_thai }} {{ tefal.name_eng }}</div>
-        <div>รุ่น: {{ tefal.model }}</div>
-        <div>ประเภท: {{ tefal.category }}</div>
-        <div>รายละเอียด: {{ tefal.detail }}</div>
-        <div>ราคา: {{ tefal.price }}</div>
+        <h1><span>Tefal</span></h1>
+        <div>id: <a1>{{ tefal.id }}</a1></div>
+        <div>ชื่อ: <a1>{{ tefal.name_thai }} {{ tefal.name_eng }}</a1></div>
+        <div>รุ่น: <a1>{{ tefal.model }}</a1></div>
+        <div>ประเภท: <a1>{{ tefal.category }}</a1></div>
+        <div>รายละเอียด: <a1>{{ tefal.detail }}</a1></div>
+        <div>ราคา: <a1>{{ tefal.price }}</a1></div>
         <div><button v-on:click="navigateTo('/tefals')">กลับ</button></div>
         <hr>
     </div>

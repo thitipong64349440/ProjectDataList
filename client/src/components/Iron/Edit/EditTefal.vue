@@ -1,24 +1,23 @@
 <template>
     <div>
-        <h1>Edit Tefal</h1>
+        <h1><span>Edit Tefal</span></h1>
         <form v-on:submit.prevent="editTefal">
             <p>ชื่อ: <input type="text" v-model="tefal.name_thai"></p>
             <p>name: <input type="text" v-model="tefal.name_eng"></p>
             <p>รุ่น: <input type="text" v-model="tefal.model"></p>
             <p>ประเภท: <input type="text" v-model="tefal.category"></p>
             <p>รายละเอียด: <input type="text" v-model="tefal.detail"></p>
-            <p><button type="submit">edit tefal</button></p>
+            <p><button type="submit">Edit</button></p>
         </form>
         <hr>
         <div>
-            <p>ชื่อ: {{ tefal.name_thai }}</p>
-            <p>name: {{ tefal.name_eng }}</p>
-            <p>รุ่น: {{ tefal.model }}</p>
-            <p>ประเภท: {{ tefal.category }}</p>
-            <p>รายละเอียด: {{ tefal.detail }}</p>
+            <p><a>ชื่อ:</a> <a1>{{ tefal.name_thai }}</a1></p>
+            <p><a>name:</a> <a1>{{ tefal.name_eng }}</a1></p>
+            <p><a>รุ่น:</a> <a1>{{ tefal.model }}</a1></p>
+            <p><a>ประเภท:</a> <a1>{{ tefal.category }}</a1></p>
+            <p><a>รายละเอียด:</a> <a1>{{ tefal.detail }}</a1></p>
             <p></p>
         </div>
-
     </div>
 </template>
 <script>

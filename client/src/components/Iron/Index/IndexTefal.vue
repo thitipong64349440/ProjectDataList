@@ -1,11 +1,13 @@
 <template>
     <div>
-        <h1>Tefal</h1>
+        <div><button1 v-on:click="navigateTo('/index')">กลับ</button1></div>
+        <h1><span>Tefal</span></h1>
         <p><button v-on:click="create">Create Tefal</button></p>
         <div v-for="tefal in tefals" v-bind:key="tefal.id">
-            <div>ชื่อ: {{ tefal.name_thai }} {{ tefal.name_eng }}</div>
-            <div>รุ่น: {{ tefal.model }}</div>
-            <div>ราคา: {{ tefal.price }}</div>
+            <div><a>ชื่อ:</a> <a1>{{ tefal.name_thai }} {{ tefal.name_eng }}</a1></div>
+            <div><a>รุ่น:</a> <a1>{{ tefal.model }}</a1></div>
+            <div><a>ราคา:</a> <a1>{{ tefal.price }}</a1></div>
+            <p></p>
             <button v-on:click="navigateTo('/tefal/' + tefal.id)">ดูข้อมูลผู้ใช้</button>
             <button v-on:click="navigateTo('/tefal/edit/' + tefal.id)">แก้ไขข้อมูล</button>
             <button v-on:click="deleteTefal(tefal)">ลบข้อมูล</button>

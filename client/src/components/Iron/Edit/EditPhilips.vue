@@ -1,21 +1,21 @@
 <template>
     <div>
-        <h1>Edit Philips</h1>
+        <h1><span>Edit Philips</span></h1>
         <form v-on:submit.prevent="editPhilips">
             <p>ชื่อ: <input type="text" v-model="philips.name_thai"></p>
             <p>name: <input type="text" v-model="philips.name_eng"></p>
             <p>รุ่น: <input type="text" v-model="philips.model"></p>
             <p>ประเภท: <input type="text" v-model="philips.category"></p>
             <p>รายละเอียด: <input type="text" v-model="philips.detail"></p>
-            <p><button type="submit">edit philips</button></p>
+            <p><button type="submit">Edit</button></p>
         </form>
         <hr>
         <div>
-            <p>ชื่อ: {{ philips.name_thai }}</p>
-            <p>name: {{ philips.name_eng }}</p>
-            <p>รุ่น: {{ philips.model }}</p>
-            <p>ประเภท: {{ philips.category }}</p>
-            <p>รายละเอียด: {{ philips.detail }}</p>
+            <p><a>ชื่อ:</a> <a1>{{ philips.name_thai }}</a1></p>
+            <p><a>name:</a> <a1>{{ philips.name_eng }}</a1></p>
+            <p><a>รุ่น:</a> <a1>{{ philips.model }}</a1></p>
+            <p><a>ประเภท:</a> <a1>{{ philips.category }}</a1></p>
+            <p><a>รายละเอียด:</a> <a1>{{ philips.detail }}</a1></p>
             <p></p>
         </div>
 

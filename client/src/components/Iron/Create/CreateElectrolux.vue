@@ -1,25 +1,21 @@
 <template>
-    <div>
-        <h1>Create Electrolux</h1>
-        <form v-on:submit.prevent="createElectrolux">
-            <p>ชื่อ: <input type="text" v-on="electrolux.name_thai"></p>
-            <p>name: <input type="text" v-model="electrolux.name_eng"></p>
-            <p>รุ่น: <input type="text" v-model="electrolux.model"></p>
-            <p>ประเภท: <input type="text" v-model="electrolux.category"></p>
-            <p>รายละเอียด: <input type="text" v-model="electrolux.detail"></p>
-            <p>ราคา: <input type="text" v-model="electrolux.price"></p>
-            <p><button type="submit">create electrolux</button></p>
-        </form>
-        <hr>
-        <div>
-            <p>ชื่อ: {{ electrolux.name_thai }}</p>
-            <p>name: {{ electrolux.name_eng }}</p>
-            <p>รุ่น: {{ electrolux.model }}</p>
-            <p>ประเภท: {{ electrolux.category }}</p>
-            <p>รายละเอียด: {{ electrolux.detail }}</p>
-            <p>ราคา: {{ electrolux.price }}</p>
+    <div2 style="display:flex; align-items:center; justify-content:center;">
+        <div class="page">
+            <div class="form1">
+                <h1><span>Create Electrolux</span></h1>
+                <form class="register-form" v-on:submit.prevent="createElectrolux">
+                    <input type="text" placeholder="ชื่อ *" v-model="electrolux.name_thai" required>
+                    <input type="text" placeholder="name" v-model="electrolux.name_eng">
+                    <input type="text" placeholder="รุ่น *" v-model="electrolux.model" required>
+                    <input type="text" placeholder="ประเภท" v-model="electrolux.category">
+                    <input type="text" placeholder="รายละเอียด" v-model="electrolux.detail">
+                    <input type="text" placeholder="ราคา *" v-model="electrolux.price" required>
+                    <button type="submit">Create</button>
+                    <button v-on:click="navigateTo('/electroluxs')">กลับ</button>
+                </form>
+            </div>
         </div>
-    </div>
+    </div2>
 </template>
 <script>
 import ElectroluxService from '@/services/ElectroluxService'
@@ -46,8 +42,11 @@ export default {
             } catch (err) {
                 console.log(err)
             }
+        },
+        navigateTo(route){
+            this.$router.push(route)
         }
-    }
+    },
 }
 </script>
 <style scoped></style>

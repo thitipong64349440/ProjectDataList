@@ -1,11 +1,13 @@
 <template>
     <div>
-        <h1>Xiaomi</h1>
+        <div><button1 v-on:click="navigateTo('/index')">กลับ</button1></div>
+        <h1><span>Xiaomi</span></h1>
         <p><button v-on:click="create">Create Xiaomi</button></p>
         <div v-for="xiaomi in xiaomis" v-bind:key="xiaomi.id">
-            <div>ชื่อ: {{ xiaomi.name_thai }} {{ xiaomi.name_eng }}</div>
-            <div>รุ่น: {{ xiaomi.model }}</div>
-            <div>ราคา: {{ xiaomi.price }}</div>
+            <div><a>ชื่อ:</a> <a1>{{ xiaomi.name_thai }} {{ xiaomi.name_eng }}</a1></div>
+            <div><a>รุ่น:</a> <a1>{{ xiaomi.model }}</a1></div>
+            <div><a>ราคา:</a> <a1>{{ xiaomi.price }}</a1></div>
+            <p></p>
             <button v-on:click="navigateTo('/xiaomi/' + xiaomi.id)">ดูข้อมูลผู้ใช้</button>
             <button v-on:click="navigateTo('/xiaomi/edit/' + xiaomi.id)">แก้ไขข้อมูล</button>
             <button v-on:click="deleteXiaomi(xiaomi)">ลบข้อมูล</button>

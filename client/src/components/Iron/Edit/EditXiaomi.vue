@@ -1,21 +1,21 @@
 <template>
     <div>
-        <h1>Edit Xiaomi</h1>
+        <h1><span>Edit Xiaomi</span></h1>
         <form v-on:submit.prevent="editXiaomi">
             <p>ชื่อ: <input type="text" v-model="xiaomi.name_thai"></p>
             <p>name: <input type="text" v-model="xiaomi.name_eng"></p>
             <p>รุ่น: <input type="text" v-model="xiaomi.model"></p>
             <p>ประเภท: <input type="text" v-model="xiaomi.category"></p>
             <p>รายละเอียด: <input type="text" v-model="xiaomi.detail"></p>
-            <p><button type="submit">edit xiaomi</button></p>
+            <p><button type="submit">Edit</button></p>
         </form>
         <hr>
         <div>
-            <p>ชื่อ: {{ xiaomi.name_thai }}</p>
-            <p>name: {{ xiaomi.name_eng }}</p>
-            <p>รุ่น: {{ xiaomi.model }}</p>
-            <p>ประเภท: {{ xiaomi.category }}</p>
-            <p>รายละเอียด: {{ xiaomi.detail }}</p>
+            <p><a>ชื่อ:</a> <a1>{{ xiaomi.name_thai }}</a1></p>
+            <p><a>name:</a> <a1>{{ xiaomi.name_eng }}</a1></p>
+            <p><a>รุ่น:</a> <a1>{{ xiaomi.model }}</a1></p>
+            <p><a>ประเภท:</a> <a1>{{ xiaomi.category }}</a1></p>
+            <p><a>รายละเอียด:</a> <a1>{{ xiaomi.detail }}</a1></p>
             <p></p>
         </div>
 

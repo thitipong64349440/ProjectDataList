@@ -1,25 +1,20 @@
 <template>
-    <div>
-        <h1>Create Xiaomi</h1>
-        <form v-on:submit.prevent="createXiaomi">
-            <p>ชื่อ: <input type="text" v-on="xiaomi.name_thai"></p>
-            <p>name: <input type="text" v-model="texiaomifal.name_eng"></p>
-            <p>รุ่น: <input type="text" v-model="xiaomi.model"></p>
-            <p>ประเภท: <input type="text" v-model="xiaomi.category"></p>
-            <p>รายละเอียด: <input type="text" v-model="xiaomi.detail"></p>
-            <p>ราคา: <input type="text" v-model="xiaomi.price"></p>
-            <p><button type="submit">create xiaomi</button></p>
-        </form>
-        <hr>
-        <div>
-            <p>ชื่อ: {{ xiaomi.name_thai }}</p>
-            <p>name: {{ xiaomi.name_eng }}</p>
-            <p>รุ่น: {{ xiaomi.model }}</p>
-            <p>ประเภท: {{ xiaomi.category }}</p>
-            <p>รายละเอียด: {{ xiaomi.detail }}</p>
-            <p>ราคา: {{ xiaomi.price }}</p>
+    <div2 style="display:flex; align-items:center; justify-content:center;">
+        <div class="page">
+            <div class="form1">
+                <h1><span>Create Xiaomi</span></h1>
+                <form class="register-form" v-on:submit.prevent="createXiaomi">
+                    <input type="text" placeholder="ชื่อ *" v-model="xiaomi.name_thai" required>
+                    <input type="text" placeholder="name" v-model="xiaomi.name_eng">
+                    <input type="text" placeholder="รุ่น *" v-model="xiaomi.model" required>
+                    <input type="text" placeholder="ประเภท" v-model="xiaomi.category">
+                    <input type="text" placeholder="รายละเอียด" v-model="xiaomi.detail">
+                    <input type="text" placeholder="ราคา *" v-model="xiaomi.price" required>
+                    <button type="submit">Create</button>
+                    <button v-on:click="navigateTo('/electroluxs')">กลับ</button>                </form>
+            </div>
         </div>
-    </div>
+    </div2>
 </template>
 <script>
 import XiaomiService from '@/services/XiaomiService'
@@ -37,6 +32,11 @@ export default {
         }
     },
     methods: {
+        navigateTo(route) {
+            this.$router.push(route)
+        }
+    },
+    methods: {
         async createXiaomi() {
             try {
                 await XiaomiService.post(this.xiaomi)
@@ -46,9 +46,12 @@ export default {
             } catch (err) {
                 console.log(err)
             }
+        },
+        navigateTo(route){
+            this.$router.push(route)
         }
-    }
+    },
+     
 }
 </script>
 <style scoped></style>
-   

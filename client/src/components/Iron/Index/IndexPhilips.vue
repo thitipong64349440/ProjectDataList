@@ -1,11 +1,13 @@
 <template>
     <div>
-        <h1>Philips</h1>
+        <div><button1 v-on:click="navigateTo('/index')">กลับ</button1></div>
+        <h1><span>Philips</span></h1>
         <p><button v-on:click="create">Create Philips</button></p>
         <div v-for="philips in philipss" v-bind:key="philips.id">
-            <div>ชื่อ: {{ philips.name_thai }} {{ philips.name_eng }}</div>
-            <div>รุ่น: {{ philips.model }}</div>
-            <div>ราคา: {{ philips.price }}</div>
+            <div><a>ชื่อ:</a> <a1>{{ philips.name_thai }} {{ philips.name_eng }}</a1></div>
+            <div><a>รุ่น:</a> <a1>{{ philips.model }}</a1></div>
+            <div><a>ราคา:</a> <a1>{{ philips.price }}</a1></div>
+            <p></p>
             <button v-on:click="navigateTo('/philips/' + philips.id)">ดูข้อมูลผู้ใช้</button>
             <button v-on:click="navigateTo('/philips/edit/' + philips.id)">แก้ไขข้อมูล</button>
             <button v-on:click="deletePhilips(philips)">ลบข้อมูล</button>

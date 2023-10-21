@@ -1,12 +1,15 @@
 <template>
     <div>
-        <h1>Electrolux</h1>
-        <div>id: {{ electrolux.id }}</div>
-        <div>ชื่อ: {{ electrolux.name_thai }} {{ electrolux.name_eng }}</div>        <div>รุ่น: {{ electrolux.model }}</div>
-        <div>ประเภท: {{ electrolux.category }}</div>
-        <div>รายละเอียด: {{ electrolux.detail }}</div>
-        <div>ราคา: {{ electrolux.price }}</div>
-        <div><button v-on:click="navigateTo('/electroluxs')">กลับ</button></div>
+        <h1><span>Electrolux</span></h1>
+        <div>id: <a1>{{ electrolux.id }}</a1></div>
+        <div>ชื่อ: <a1>{{ electrolux.name_thai }} {{ electrolux.name_eng }}</a1></div>        
+        <div>รุ่น: <a1>{{ electrolux.model }}</a1></div>
+        <div>ประเภท: <a1>{{ electrolux.category }}</a1></div>
+        <div>รายละเอียด: <a1>{{ electrolux.detail }}</a1></div>
+        <div>ราคา: <a1>{{ electrolux.price }}</a1></div>
+        <body>
+        <div class="content">
+        <div class="content"><button v-on:click="navigateTo('/electroluxs')">กลับ</button></div></div></body>
         <hr>
     </div>
 </template>

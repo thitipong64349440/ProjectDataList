@@ -28,7 +28,7 @@ module.exports = {
         try {
             await Philips.update(req.body, {
                 where: {
-                    id: req.params.PhilipsId
+                    id: req.params.philipsId
                 }
             })
             res.send(req.body)
