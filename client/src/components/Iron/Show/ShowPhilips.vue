@@ -7,6 +7,7 @@
         <div>ประเภท: <a1>{{ philips.category }}</a1></div>
         <div>รายละเอียด: <a1>{{ philips.detail }}</a1></div>
         <div>ราคา: <a1>{{ philips.price }}</a1></div>
+        <p></p>
         <div><button v-on:click="navigateTo('/philipss')">กลับ</button></div>
         <hr>
     </div>

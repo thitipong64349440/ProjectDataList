@@ -7,9 +7,8 @@
         <div>ประเภท: <a1>{{ electrolux.category }}</a1></div>
         <div>รายละเอียด: <a1>{{ electrolux.detail }}</a1></div>
         <div>ราคา: <a1>{{ electrolux.price }}</a1></div>
-        <body>
-        <div class="content">
-        <div class="content"><button v-on:click="navigateTo('/electroluxs')">กลับ</button></div></div></body>
+        <p></p>
+        <button v-on:click="navigateTo('/electroluxs')">กลับ</button>
         <hr>
     </div>
 </template>

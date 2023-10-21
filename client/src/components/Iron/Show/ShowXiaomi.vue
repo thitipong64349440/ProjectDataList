@@ -7,6 +7,7 @@
         <div>ประเภท: <a1>{{ xiaomi.category }}</a1></div>
         <div>รายละเอียด: <a1>{{ xiaomi.detail }}</a1></div>
         <div>ราคา: <a1>{{ xiaomi.price }}</a1></div>
+        <p></p>
         <div><button v-on:click="navigateTo('/xiaomis')">กลับ</button></div>
         <hr>
     </div>

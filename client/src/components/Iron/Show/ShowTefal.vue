@@ -7,6 +7,7 @@
         <div>ประเภท: <a1>{{ tefal.category }}</a1></div>
         <div>รายละเอียด: <a1>{{ tefal.detail }}</a1></div>
         <div>ราคา: <a1>{{ tefal.price }}</a1></div>
+        <p></p>
         <div><button v-on:click="navigateTo('/tefals')">กลับ</button></div>
         <hr>
     </div>
