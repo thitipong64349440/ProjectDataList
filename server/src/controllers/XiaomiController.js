@@ -1,7 +1,7 @@
 const { Xiaomi } = require('../models')
 
 module.exports = {
-    //get all user
+    //get all
     async index(req, res) {
         try {
             const xiaomis = await Xiaomi.findAll()
@@ -14,7 +14,7 @@ module.exports = {
     },
 
 
-    // create user
+    // create
     async create(req, res) {
         try {
             const xiaomi = await Xiaomi.create(req.body)
@@ -26,7 +26,7 @@ module.exports = {
         }
     },
 
-    // edit user, suspend, active
+    // edit
     async put(req, res) {
         try {
             await Xiaomi.update(req.body, {
@@ -63,7 +63,6 @@ module.exports = {
         }
     },
 
-    // get user by id
     async show(req, res) {
         try {
             const xiaomi = await Xiaomi.findByPk(req.params.xiaomiId)
