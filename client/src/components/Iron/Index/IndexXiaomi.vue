@@ -8,7 +8,7 @@
             <div><a>รุ่น:</a> <a1>{{ xiaomi.model }}</a1></div>
             <div><a>ราคา:</a> <a1>{{ xiaomi.price }}</a1></div>
             <p></p>
-            <button v-on:click="navigateTo('/xiaomi/' + xiaomi.id)">ดูข้อมูลผู้ใช้</button>
+            <button v-on:click="navigateTo('/xiaomi/' + xiaomi.id)">ดูข้อมูล</button>
             <button v-on:click="navigateTo('/xiaomi/edit/' + xiaomi.id)">แก้ไขข้อมูล</button>
             <button v-on:click="deleteXiaomi(xiaomi)">ลบข้อมูล</button>
             <hr>
