@@ -1,7 +1,7 @@
 const { Electrolux } = require('../models')
 
 module.exports = {
-    //get all user
+    //get all
     async index(req, res) {
         try {
             const electroluxs = await Electrolux.findAll()
@@ -14,7 +14,7 @@ module.exports = {
     },
 
 
-    // create user
+    // create
     async create(req, res) {
         try {
             const electrolux = await Electrolux.create(req.body)
@@ -26,7 +26,7 @@ module.exports = {
         }
     },
 
-    // edit user, suspend, active
+    // edit
     async put(req, res) {
         try {
             await Electrolux.update(req.body, {
@@ -42,7 +42,7 @@ module.exports = {
         }
     },
 
-    // delete electrolux
+    // delete
     async delete(req, res) {
         try {
             const electrolux = await Electrolux.findOne({
@@ -64,7 +64,6 @@ module.exports = {
         }
     },
 
-    // get user by id
     async show(req, res) {
         try {
             const electrolux = await Electrolux.findByPk(req.params.electroluxId)
