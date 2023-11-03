@@ -8,7 +8,7 @@
             <div><a>รุ่น:</a> <a1>{{ philips.model }}</a1></div>
             <div><a>ราคา:</a> <a1>{{ philips.price }}</a1></div>
             <p></p>
-            <button v-on:click="navigateTo('/philips/' + philips.id)">ดูข้อมูลผู้ใช้</button>
+            <button v-on:click="navigateTo('/philips/' + philips.id)">ดูข้อมูล</button>
             <button v-on:click="navigateTo('/philips/edit/' + philips.id)">แก้ไขข้อมูล</button>
             <button v-on:click="deletePhilips(philips)">ลบข้อมูล</button>
             <hr>
