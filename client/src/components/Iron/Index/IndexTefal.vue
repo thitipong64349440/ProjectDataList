@@ -8,7 +8,7 @@
             <div><a>รุ่น:</a> <a1>{{ tefal.model }}</a1></div>
             <div><a>ราคา:</a> <a1>{{ tefal.price }}</a1></div>
             <p></p>
-            <button v-on:click="navigateTo('/tefal/' + tefal.id)">ดูข้อมูลผู้ใช้</button>
+            <button v-on:click="navigateTo('/tefal/' + tefal.id)">ดูข้อมูล</button>
             <button v-on:click="navigateTo('/tefal/edit/' + tefal.id)">แก้ไขข้อมูล</button>
             <button v-on:click="deleteTefal(tefal)">ลบข้อมูล</button>
             <hr>
