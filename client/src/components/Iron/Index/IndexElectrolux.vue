@@ -8,7 +8,7 @@
             <div><a>รุ่น:</a> <a1>{{ electrolux.model }}</a1></div>
             <div><a>ราคา:</a> <a1>{{ electrolux.price }}</a1></div>
             <P></P>
-            <button v-on:click="navigateTo('/electrolux/' + electrolux.id)">ดูข้อมูลผู้ใช้</button>
+            <button v-on:click="navigateTo('/electrolux/' + electrolux.id)">ดูข้อมูล</button>
             <button v-on:click="navigateTo('/electrolux/edit/' + electrolux.id)">แก้ไขข้อมูล</button>
             <button v-on:click="deleteElectrolux(electrolux)">ลบข้อมูล</button>
             <hr>
