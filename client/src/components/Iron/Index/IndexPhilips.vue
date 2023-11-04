@@ -33,7 +33,6 @@ export default {
         }
     },
     methods: {
-        // เข้าหน้าสร้าง User ใหม่
         create() {
             this.$router.push({ name: 'philips-create' })
         },
