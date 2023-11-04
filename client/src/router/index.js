@@ -126,11 +126,5 @@ export default new Router({
       name: 'xiaomi',
       component: XiaomiShow
     },
-
-    // {
-    //   path: '/login',
-    //   name: 'login',
-    //   component: Login
-    //  },
   ]
 })
