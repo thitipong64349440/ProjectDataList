@@ -4,7 +4,6 @@ const TefalController = require('./controllers/TefalController')
 const XiaomiController = require('./controllers/XiaomiController')
 
 module.exports = (app) => {
-    /* RESFUL Api for users management */
 
     // Electrolux
     app.get('/electroluxs', ElectroluxController.index)
